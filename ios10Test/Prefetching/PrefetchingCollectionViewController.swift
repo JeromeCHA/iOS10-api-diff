@@ -20,6 +20,7 @@ class PrefetchingCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         URLCache.shared.removeAllCachedResponses()
         if isPrefetchingEnable {
+            collectionView?.isPrefetchingEnabled = true
             collectionView?.prefetchDataSource = self
         }
     }

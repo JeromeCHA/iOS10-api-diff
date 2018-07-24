@@ -19,22 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="TvP-CI-k7l">
-                                <rect key="frame" x="7" y="248.5" width="361" height="170.5"/>
+                                <rect key="frame" x="50" y="248.5" width="275" height="170.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FractionComplete Demo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-db-r14">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GnN-HA-DGy">
-                                        <rect key="frame" x="-2" y="50.5" width="365" height="31"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="APh-p7-QD1" eventType="valueChanged" id="39H-Xz-TMs"/>
-                                        </connections>
-                                    </slider>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgD-wF-aXV">
-                                        <rect key="frame" x="0.0" y="110.5" width="361" height="60"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="275" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gig-ee-TS3">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="60"/>
@@ -53,6 +47,12 @@
                                             <constraint firstAttribute="height" constant="60" id="yyQ-T9-4ko"/>
                                         </constraints>
                                     </view>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GnN-HA-DGy">
+                                        <rect key="frame" x="-2" y="140.5" width="279" height="31"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="APh-p7-QD1" eventType="valueChanged" id="39H-Xz-TMs"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zgD-wF-aXV" firstAttribute="leading" secondItem="TvP-CI-k7l" secondAttribute="leading" id="NFd-Um-2Gc"/>
@@ -62,10 +62,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZNw-wC-paP" firstAttribute="trailing" secondItem="TvP-CI-k7l" secondAttribute="trailing" constant="7" id="UJy-Gu-FCU"/>
+                            <constraint firstItem="ZNw-wC-paP" firstAttribute="trailing" secondItem="TvP-CI-k7l" secondAttribute="trailing" constant="50" id="UJy-Gu-FCU"/>
                             <constraint firstItem="TvP-CI-k7l" firstAttribute="centerX" secondItem="33p-jL-aJ8" secondAttribute="centerX" id="cRe-ea-CH1"/>
                             <constraint firstItem="TvP-CI-k7l" firstAttribute="centerY" secondItem="33p-jL-aJ8" secondAttribute="centerY" id="eaA-j4-a6c"/>
-                            <constraint firstItem="TvP-CI-k7l" firstAttribute="leading" secondItem="ZNw-wC-paP" secondAttribute="leading" constant="7" id="iIF-4R-V7I"/>
+                            <constraint firstItem="TvP-CI-k7l" firstAttribute="leading" secondItem="ZNw-wC-paP" secondAttribute="leading" constant="50" id="iIF-4R-V7I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZNw-wC-paP"/>
                     </view>
@@ -197,10 +197,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-6E-QJ3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cK2-6E-QJ3">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="894-H3-vl8">
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="894-H3-vl8">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DVm-2L-MIy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>

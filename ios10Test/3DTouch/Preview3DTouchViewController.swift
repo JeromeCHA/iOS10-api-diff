@@ -20,18 +20,6 @@ class Preview3DTouchViewController: UIViewController {
         previewInteraction = UIPreviewInteraction(view: view)
         previewInteraction?.delegate = self
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        imageView.isHidden = false
-        blurEffectView.isHidden = false
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        imageView.isHidden = true
-        blurEffectView.isHidden = true
-    }
 }
 
 extension Preview3DTouchViewController: UIPreviewInteractionDelegate {
@@ -49,7 +37,7 @@ extension Preview3DTouchViewController: UIPreviewInteractionDelegate {
     // optional
     func previewInteraction(_ previewInteraction: UIPreviewInteraction, didUpdateCommitTransition transitionProgress: CGFloat, ended: Bool) {
         if ended {
-            blurEffectView.alpha = 1
+            blurEffectView.alpha = 0
         }
     }
 }

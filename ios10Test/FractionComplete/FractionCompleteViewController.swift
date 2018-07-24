@@ -22,6 +22,11 @@ class FractionCompleteViewController: UIViewController {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animator?.stopAnimation(true)
+    }
+
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         self.animator?.fractionComplete = CGFloat(sender.value)
     }
